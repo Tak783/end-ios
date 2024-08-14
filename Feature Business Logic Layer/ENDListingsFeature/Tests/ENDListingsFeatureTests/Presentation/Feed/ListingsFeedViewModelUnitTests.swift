@@ -43,7 +43,27 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
     }
     
     func test_loadFeed_triggersAPICall_whichSuccessOrFailure_setsLoadStateToFalse() {
+        let client = HTTPClientSpy()
+        let remoteListingsFeedService = RemoteListingsFeedService(
+            client: client
+        )
+        let (sut, spy) = make_sut(
+            listingsFeedService: remoteListingsFeedService
+        )
+
+        sut.loadFeed()
+        XCTAssertEqual(spy.isLoading, true)
         
+        client.complete(withStatusCode: 400, data: MockData.any_data(
+            for: MockData.FileName.badJSON.rawValue,
+            fromBundle: MockNetworkingPackageBundleAccessor.bundle
+        ))
+        XCTAssertEqual(spy.isLoading, false)
+
+        sut.loadFeed()
+        XCTAssertEqual(spy.isLoading, true)
+        client.complete(withStatusCode: 200, data: Data())
+        XCTAssertEqual(spy.isLoading, false)
     }
     
     func test_loadFeed_triggersAPICall_whichOnError_returnsError() {

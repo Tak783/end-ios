@@ -37,5 +37,9 @@ public final class ListingsFeedViewModel {
 extension ListingsFeedViewModel: ListingsFeedViewModelling {
     public func loadFeed() {
         onLoadingStateChange?(true)
+        accountsFeedService.load { [weak self] result in
+            guard let self = self else { return }
+            self.onLoadingStateChange?(false)
+        }
     }
 }
