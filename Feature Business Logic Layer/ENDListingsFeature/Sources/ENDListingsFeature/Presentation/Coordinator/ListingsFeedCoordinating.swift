@@ -10,6 +10,6 @@ import CoreENDSharedModels
 public protocol ListingsFeedCoordinating: AnyObject {
     func navigateToListingsFeed()
     func navigateToListingDetail(
-        forListing listing: ENDProductModelling
+        forListing listing: ENDProductModel
     )
 }

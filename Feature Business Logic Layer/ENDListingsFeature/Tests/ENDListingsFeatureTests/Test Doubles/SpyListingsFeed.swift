@@ -6,7 +6,7 @@
 //
 
 import CoreENDSharedModels
-@testable import ENDListingsFeature
+import ENDListingsFeature
 import Foundation
 
 final class SpyListingsFeed: NSObject {
