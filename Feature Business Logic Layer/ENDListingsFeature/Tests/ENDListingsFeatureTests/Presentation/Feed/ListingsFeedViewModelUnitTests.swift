@@ -8,27 +8,6 @@
 import XCTest
 import CoreFoundational
 import CoreNetworking
+import CoreENDSharedModels
 @testable import ENDListingsFeature
 import MockNetworking
-
-final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
-    func test_init_setsInitialVariablesCorrectly() {
-        
-    }
-    
-    func test_loadFeed_setsLoadStateToTrue() {
-        
-    }
-    
-    func test_loadFeed_triggersAPICall_whichSuccessOrFailure_setsLoadStateToFalse() {
-        
-    }
-    
-    func test_loadFeed_triggersAPICall_whichOnError_returnsError() {
-        
-    }
-    
-    func test_loadFeed_triggersAPICall_whichOnSuccess_returnsListings() {
-        
-    }
-}
