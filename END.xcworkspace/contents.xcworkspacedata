@@ -13,6 +13,10 @@
    </Group>
    <Group
       location = "container:"
+      name = "Core Shared Components Layer">
+   </Group>
+   <Group
+      location = "container:"
       name = "Presentation Layer">
       <Group
          location = "container:"
