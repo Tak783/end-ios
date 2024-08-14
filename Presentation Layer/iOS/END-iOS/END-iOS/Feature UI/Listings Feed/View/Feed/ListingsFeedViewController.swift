@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import CorePresentation
 import ENDListingsFeature
 
-final class ListingsFeedViewController: UIViewController {
+final class ListingsFeedViewController: UIViewController, Storyboarded {
     var feedViewModel: ListingsFeedViewModelling?
     
     override func viewDidLoad() {

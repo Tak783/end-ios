@@ -16,7 +16,10 @@ final class AppLaunchCoordinator {
     var childCoordinators = [ChildCoordinatorable]()
     let client: HTTPClient
     
-    init(router: Router, client: HTTPClient) {
+    init(
+        router: Router,
+        client: HTTPClient
+    ) {
         self.router = router
         self.client = client
     }
@@ -25,7 +28,9 @@ final class AppLaunchCoordinator {
         navigateToAccountsFeed()
     }
     
-    func didEnd(childCoordinator: ChildCoordinatorable) {
+    func didEnd(
+        childCoordinator: ChildCoordinatorable
+    ) {
         efficientPrint("Did close parent coordinator")
     }
 }

@@ -15,7 +15,7 @@ public final class ListingsFeedViewModel {
     public var onFeedLoadSuccess: Observer<[ENDProductModel]>?
     
     public var title: String
-    public var accountsFeedService: ListingsFeedServiceable
+    public var listingsFeedService: ListingsFeedServiceable
 
     public weak var coordinator: ListingsFeedCoordinating?
     public private (set) var feedItemPresentaionModels = [ENDProductPresentationModelling]()
@@ -23,12 +23,12 @@ public final class ListingsFeedViewModel {
     private var listingModels = [ENDProductModel]()
     
     public init(
-        accountsFeedService: ListingsFeedServiceable,
+        listingsFeedService: ListingsFeedServiceable,
         title: String,
         coordinator: ListingsFeedCoordinating?
     ) {
         self.title = title
-        self.accountsFeedService = accountsFeedService
+        self.listingsFeedService = listingsFeedService
         self.coordinator = coordinator
     }
 }
@@ -37,7 +37,7 @@ public final class ListingsFeedViewModel {
 extension ListingsFeedViewModel: ListingsFeedViewModelling {
     public func loadFeed() {
         onLoadingStateChange?(true)
-        accountsFeedService.load { [weak self] result in
+        listingsFeedService.load { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(listings):

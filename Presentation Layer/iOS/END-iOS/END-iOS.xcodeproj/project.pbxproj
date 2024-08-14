@@ -24,6 +24,9 @@
 		8BE06EFB2C6D3EEB00FA1D07 /* CoreUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EFA2C6D3EEB00FA1D07 /* CoreUIKit */; };
 		8BE06EFD2C6D3EEB00FA1D07 /* ENDListingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */; };
 		8BE06EFF2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */; };
+		8BE06F042C6D3FF700FA1D07 /* ListingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06F032C6D3FF700FA1D07 /* ListingsCoordinator.swift */; };
+		8BE06F062C6D40B100FA1D07 /* CoreENDSharedModels in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06F052C6D40B100FA1D07 /* CoreENDSharedModels */; };
+		8BE06F092C6D415800FA1D07 /* ListingsFeedComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06F082C6D415800FA1D07 /* ListingsFeedComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,8 @@
 		8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedViewController.swift; sourceTree = "<group>"; };
 		8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingsFeed.storyboard; sourceTree = "<group>"; };
 		8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchCoordinator.swift; sourceTree = "<group>"; };
+		8BE06F032C6D3FF700FA1D07 /* ListingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsCoordinator.swift; sourceTree = "<group>"; };
+		8BE06F082C6D415800FA1D07 /* ListingsFeedComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 			files = (
 				8BE06EFB2C6D3EEB00FA1D07 /* CoreUIKit in Frameworks */,
 				8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */,
+				8BE06F062C6D40B100FA1D07 /* CoreENDSharedModels in Frameworks */,
 				8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */,
 				8BE06EFD2C6D3EEB00FA1D07 /* ENDListingsFeature in Frameworks */,
 				8BE06EF92C6D3EEB00FA1D07 /* CorePresentation in Frameworks */,
@@ -181,8 +187,7 @@
 		8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */ = {
 			isa = PBXGroup;
 			children = (
-				8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */,
-				8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */,
+				8BE06F002C6D3FDE00FA1D07 /* View */,
 			);
 			path = "Listings Feed";
 			sourceTree = "<group>";
@@ -192,6 +197,41 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BE06F002C6D3FDE00FA1D07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BE06F072C6D414A00FA1D07 /* Composer */,
+				8BE06F022C6D3FEB00FA1D07 /* Coordinator */,
+				8BE06F012C6D3FE200FA1D07 /* Feed */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BE06F012C6D3FE200FA1D07 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */,
+				8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		8BE06F022C6D3FEB00FA1D07 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8BE06F032C6D3FF700FA1D07 /* ListingsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8BE06F072C6D414A00FA1D07 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				8BE06F082C6D415800FA1D07 /* ListingsFeedComposer.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +256,7 @@
 				8BE06EF82C6D3EEB00FA1D07 /* CorePresentation */,
 				8BE06EFA2C6D3EEB00FA1D07 /* CoreUIKit */,
 				8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */,
+				8BE06F052C6D40B100FA1D07 /* CoreENDSharedModels */,
 			);
 			productName = "END-iOS";
 			productReference = 8B37DC9C2C6CDD7D00824B46 /* END-iOS.app */;
@@ -336,8 +377,10 @@
 				8B37DCA42C6CDD7D00824B46 /* ViewController.swift in Sources */,
 				8B37DCA02C6CDD7D00824B46 /* AppDelegate.swift in Sources */,
 				8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */,
+				8BE06F042C6D3FF700FA1D07 /* ListingsCoordinator.swift in Sources */,
 				8BE06EFF2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift in Sources */,
 				8B37DCA22C6CDD7D00824B46 /* SceneDelegate.swift in Sources */,
+				8BE06F092C6D415800FA1D07 /* ListingsFeedComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +748,10 @@
 		8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ENDListingsFeature;
+		};
+		8BE06F052C6D40B100FA1D07 /* CoreENDSharedModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreENDSharedModels;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

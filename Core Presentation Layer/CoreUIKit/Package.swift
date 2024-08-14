@@ -5,17 +5,30 @@ import PackageDescription
 
 let package = Package(
     name: "CoreUIKit",
+    platforms: [
+        .iOS(.v17)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "CoreUIKit",
             targets: ["CoreUIKit"]),
     ],
+    dependencies: [
+        .package(
+            name: "CoreFoundational",
+            path: "../Core Layer/CoreFoundational"
+        )
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "CoreUIKit"),
+            name: "CoreUIKit",
+            dependencies: [
+                .product(
+                    name: "CoreFoundational",
+                    package: "CoreFoundational"
+                )
+            ]
+        ),
         .testTarget(
             name: "CoreUIKitTests",
             dependencies: ["CoreUIKit"]),
