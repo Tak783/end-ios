@@ -3,12 +3,22 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Core Layer">
+      <FileRef
+         location = "group:Core Layer/CoreFoundational">
+      </FileRef>
+      <FileRef
+         location = "group:Core Layer/CoreTesting">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Presentation Layer">
       <Group
          location = "container:"
          name = "iOS App">
          <FileRef
-            location = "group:END-iOS/END-iOS.xcodeproj">
+            location = "group:Presentation Layer/iOS App/END-iOS/END-iOS.xcodeproj">
          </FileRef>
       </Group>
    </Group>
