@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Presentation Layer">
+      <Group
+         location = "container:"
+         name = "iOS App">
+         <FileRef
+            location = "group:END-iOS/END-iOS.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
