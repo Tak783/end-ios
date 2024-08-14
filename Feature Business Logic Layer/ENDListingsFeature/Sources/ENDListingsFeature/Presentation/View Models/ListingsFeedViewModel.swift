@@ -41,12 +41,37 @@ extension ListingsFeedViewModel: ListingsFeedViewModelling {
             guard let self = self else { return }
             switch result {
             case let .success(listings):
-                break
+                self.didLoadListings(listings)
             case .failure(let error):
                 efficientPrint(error.localizedDescription)
                 self.onFeedLoadError?("Failed to Load Feed")
             }
             self.onLoadingStateChange?(false)
+        }
+    }
+}
+
+// MARK: - Load Listings Helpers
+extension ListingsFeedViewModel {
+    private func didLoadListings(_ listings: [ENDProductModel]) {
+        listingModels = listings
+        feedItemPresentaionModels = Self.adaptAccountToPresentationModels(
+            for: listings
+        )
+        onFeedLoadError?(.none)
+        onFeedLoadSuccess?(listings)
+    }
+}
+
+// MARK: - Adapt Listings models to Presentations Models
+extension ListingsFeedViewModel {
+    private static func adaptAccountToPresentationModels(
+        for listings: [ENDProductModel]
+    ) -> [ENDProductPresentationModelling] {
+        return listings.map { listing in
+            return ENDProductPresentationModel(
+                withListing: listing
+            )
         }
     }
 }

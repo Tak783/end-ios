@@ -83,7 +83,34 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
     }
     
     func test_loadFeed_triggersAPICall_whichOnSuccess_returnsListings() {
+        let client = HTTPClientSpy()
+        let remoteListingsFeedService = RemoteListingsFeedService(
+            client: client
+        )
+        let (sut, spy) = make_sut(
+            listingsFeedService: remoteListingsFeedService
+        )
+        let accountsResponseData = MockData.any_data(
+            for: MockData.FileName.listings.rawValue,
+            fromBundle: MockNetworkingPackageBundleAccessor.bundle
+        )
         
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(
+            .jsonDateTimeFormatter
+        )
+        
+        let expectedFeed = try! decoder.decode(
+            RemoteListingsFeed.self,
+            from: accountsResponseData
+        )
+        sut.loadFeed()
+        client.complete(withStatusCode: 200, data: accountsResponseData)
+
+        XCTAssertEqual(
+            spy.listings, expectedFeed.products.toModels()
+        )
+        XCTAssertEqual(spy.error, .none)
     }
 }
 
