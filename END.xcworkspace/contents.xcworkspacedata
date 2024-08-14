@@ -46,6 +46,9 @@
       location = "container:"
       name = "Core Presentation Layer">
       <FileRef
+         location = "group:Core Presentation Layer/CoreUIKit">
+      </FileRef>
+      <FileRef
          location = "group:Core Presentation Layer/CorePresentation">
       </FileRef>
    </Group>
