@@ -14,6 +14,12 @@
    <Group
       location = "container:"
       name = "Core Shared Components Layer">
+      <FileRef
+         location = "group:Core Shared Components Layer/CoreNetworking">
+      </FileRef>
+      <FileRef
+         location = "group:Core Shared Components Layer/MockNetworking">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
