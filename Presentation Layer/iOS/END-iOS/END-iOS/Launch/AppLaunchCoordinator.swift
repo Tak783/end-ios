@@ -25,7 +25,7 @@ final class AppLaunchCoordinator {
     }
     
     func start() {
-        navigateToAccountsFeed()
+        navigateToListingsFeed()
     }
     
     func didEnd(
@@ -37,7 +37,15 @@ final class AppLaunchCoordinator {
 
 // MARK: - ParentCoordinatorable
 extension AppLaunchCoordinator: ParentCoordinatorable {
-    func navigateToAccountsFeed() {
-      
+    func navigateToListingsFeed() {
+        let listingsCoordinator = ListingsCoordinator(
+            router: router,
+            client: client,
+            parentCoordinator: self
+        )
+        addChildCoordinator(
+            coordinator: listingsCoordinator
+        )
+        listingsCoordinator.start()
     }
 }
