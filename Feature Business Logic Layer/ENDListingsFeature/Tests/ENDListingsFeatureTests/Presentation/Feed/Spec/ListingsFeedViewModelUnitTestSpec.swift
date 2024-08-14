@@ -9,6 +9,7 @@ import Foundation
 import XCTest
 
 protocol ListingsFeedViewModelUnitTestSpec {
+    func test_init_setsInitialVariablesCorrectly()
     func test_loadFeed_setsLoadStateToTrue()
     func test_loadFeed_triggersAPICall_whichSuccessOrFailure_setsLoadStateToFalse()
     func test_loadFeed_triggersAPICall_whichOnError_returnsError()

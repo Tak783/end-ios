@@ -12,6 +12,10 @@ import MockNetworking
 @testable import ENDListingsFeature
 
 final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
+    func test_init_setsInitialVariablesCorrectly() {
+        
+    }
+    
     func test_loadFeed_setsLoadStateToTrue() {
         
     }
