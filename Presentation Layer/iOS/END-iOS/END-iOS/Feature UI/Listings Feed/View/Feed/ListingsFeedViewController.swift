@@ -14,5 +14,6 @@ final class ListingsFeedViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .yellow
     }
 }
