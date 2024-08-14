@@ -32,7 +32,7 @@
       location = "container:"
       name = "Core END Layer">
       <FileRef
-         location = "group:Core END Layer/CoreEndSharedModels">
+         location = "group:Core END Layer/CoreENDSharedModels">
       </FileRef>
    </Group>
    <Group

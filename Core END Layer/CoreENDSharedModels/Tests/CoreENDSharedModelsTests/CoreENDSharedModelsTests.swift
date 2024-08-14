@@ -1,7 +1,7 @@
 import XCTest
-@testable import CoreEndSharedModels
+@testable import CoreENDSharedModels
 
-final class CoreEndSharedModelsTests: XCTestCase {
+final class CoreENDSharedModelsTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

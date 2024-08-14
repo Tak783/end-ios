@@ -5,7 +5,7 @@
 //  Created by Tak Mazarura on 14/08/2024.
 //
 
-public struct ENDProduct: Codable {
+public struct ENDProductModel {
     public let id: String
     public let name: String
     public let price: String
@@ -24,4 +24,4 @@ public struct ENDProduct: Codable {
 }
 
 // MARK: - ENDProductModelling
-extension ENDProduct: ENDProductModelling {}
+extension ENDProductModel: ENDProductModelling {}

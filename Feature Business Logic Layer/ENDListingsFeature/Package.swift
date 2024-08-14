@@ -29,8 +29,8 @@ let package = Package(
             path: "../Core Shared Components Layer/MockNetworking"
         ),
         .package(
-            name: "CoreStarlingEngineSharedModels",
-            path: "../Core Starling Engine Layer/CoreStarlingEngineSharedModels"
+            name: "CoreENDSharedModels",
+            path: "../Core END Layer/CoreENDSharedModels"
         )
     ],
     targets: [
@@ -48,8 +48,8 @@ let package = Package(
                     package: "CoreNetworking"
                 ),
                 .product(
-                    name: "CoreStarlingEngineSharedModels",
-                    package: "CoreStarlingEngineSharedModels"
+                    name: "CoreENDSharedModels",
+                    package: "CoreENDSharedModels"
                 )
             ]
         ),
