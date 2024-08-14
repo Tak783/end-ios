@@ -18,7 +18,7 @@ public final class ListingsFeedViewModel {
     public var accountsFeedService: ListingsFeedServiceable
 
     public weak var coordinator: ListingsFeedCoordinating?
-    public private (set) var feedItemViewModels = [ENDProductPresentationModelling]()
+    public private (set) var feedItemPresentaionModels = [ENDProductPresentationModelling]()
 
     private var listingModels = [ENDProductModel]()
     
@@ -39,6 +39,13 @@ extension ListingsFeedViewModel: ListingsFeedViewModelling {
         onLoadingStateChange?(true)
         accountsFeedService.load { [weak self] result in
             guard let self = self else { return }
+            switch result {
+            case let .success(listings):
+                break
+            case .failure(let error):
+                efficientPrint(error.localizedDescription)
+                self.onFeedLoadError?("Failed to Load Feed")
+            }
             self.onLoadingStateChange?(false)
         }
     }

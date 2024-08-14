@@ -67,7 +67,19 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
     }
     
     func test_loadFeed_triggersAPICall_whichOnError_returnsError() {
-        
+        let client = HTTPClientSpy()
+        let remoteListingsFeedService = RemoteListingsFeedService(
+            client: client
+        )
+        let (sut, spy) = make_sut(
+            listingsFeedService: remoteListingsFeedService
+        )
+        let expectedError = NSError(domain: "Any Error", code: 404)
+
+        sut.loadFeed()
+        client.complete(with: expectedError)
+
+        XCTAssertNotNil(spy.error)
     }
     
     func test_loadFeed_triggersAPICall_whichOnSuccess_returnsListings() {
