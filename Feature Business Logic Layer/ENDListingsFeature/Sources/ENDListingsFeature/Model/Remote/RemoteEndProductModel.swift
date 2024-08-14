@@ -6,18 +6,19 @@
 //
 
 import CoreENDSharedModels
+import Foundation
 
 public struct RemoteENDProductModel {
     public let id: String
     public let name: String
     public let price: String
-    public let imageURL: String
+    public let imageURL: URL
     
     public init(
         id: String,
         name: String,
         price: String,
-        imageURL: String
+        imageURL: URL
     ) {
         self.id = id
         self.name = name
