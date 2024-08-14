@@ -3,13 +3,6 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "Core END Layer">
-      <FileRef
-         location = "group:Core END Layer/CoreEndSharedModels">
-      </FileRef>
-   </Group>
-   <Group
-      location = "container:"
       name = "Core Layer">
       <FileRef
          location = "group:Core Layer/CoreFoundational">
@@ -37,7 +30,17 @@
    </Group>
    <Group
       location = "container:"
-      name = "Feature Layer">
+      name = "Core END Layer">
+      <FileRef
+         location = "group:Core END Layer/CoreEndSharedModels">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Feature Business Logic Layer">
+      <FileRef
+         location = "group:Feature Business Logic Layer/ENDListingsFeature">
+      </FileRef>
    </Group>
    <Group
       location = "container:"

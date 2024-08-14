@@ -22,3 +22,6 @@ public struct ENDProduct: Codable {
         self.image = image
     }
 }
+
+// MARK: - ENDProductModelling
+extension ENDProduct: ENDProductModelling {}
