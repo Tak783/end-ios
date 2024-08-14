@@ -11,17 +11,8 @@ import Foundation
 public final class MockData {
     public enum FileName: String {
         case badJSON = "BadJSON"
-        case account = "Account"
-        case accounts = "Accounts"
-        case transactions = "Transactions"
-        case transaction = "Transaction"
-        case savingsGoals = "SavingsGoals"
-        case savingsGoal = "SavingsGoal"
-        case savedSavingsGoal = "SavedSavingsGoal"
-        case savedSavingsGoalFailed = "SavedSavingsGoalFailed"
-        case totalSaved = "TotalSaved"
-        case savingsGoalAddedTo = "SavingsGoalAddedTo"
-        case savingsGoalAddedToFailed = "SavingsGoalAddedToFailed"
+        case listing = "Listing"
+        case listings = "Listings"
     }
 
     public static var mockNetworkingBundle: Bundle {

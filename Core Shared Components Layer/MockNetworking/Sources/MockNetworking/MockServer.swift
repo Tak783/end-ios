@@ -24,22 +24,3 @@ public final class MockServer {
         }
     }
 }
-
-/*
- {
-     guard let fileURL = bundle.url(
-         forResource: fileName,
-         withExtension: "json",
-         subdirectory: "Resources"
-     ) else {
-         fatalError("Failed to open mock data file in bundle ")
-     }
-     do {
-         //return try? Data(contentsOf: url)
-         let data = try Data(contentsOf: fileURL, options: .mappedIfSafe)
-         return data
-     } catch {
-         fatalError("Failed to open mock data file in bundle ")
-     }
- }
- */

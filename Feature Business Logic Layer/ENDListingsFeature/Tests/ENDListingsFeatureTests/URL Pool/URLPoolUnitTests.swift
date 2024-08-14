@@ -11,7 +11,7 @@ import CoreTesting
 @testable import ENDListingsFeature
 import XCTest
 
-final class URLPoolTests: ListingsAPIURLPoolTests {
+final class URLPoolUnitTests: ListingsAPIURLPoolTests {
     let expectedScheme = "https"
     let expectedHost = "endclothing.com"
     let defaultPath = "/media/catalog"
@@ -22,8 +22,8 @@ final class URLPoolTests: ListingsAPIURLPoolTests {
     }
 }
  
-// MARK: - Test Accounts
-extension URLPoolTests {
+// MARK: - Test Feed
+extension URLPoolUnitTests {
     func test_feedRequest_configuresFeedRequestCorrectly() {
         let expectedUrlAbsoluteString = fullURL(withPathSuffix: "/example.json")
         let request = URLPool.listingsFeedRequest()
@@ -37,7 +37,7 @@ extension URLPoolTests {
 }
 
 // MARK: - Helpers
-extension URLPoolTests {
+extension URLPoolUnitTests {
     private func fullURL(withPathSuffix pathSuffix: String) -> String {
         return expectedScheme + "://" + expectedHost + defaultPath + pathSuffix
     }
