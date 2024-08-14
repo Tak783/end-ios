@@ -28,7 +28,7 @@
          location = "container:"
          name = "iOS App">
          <FileRef
-            location = "group:Presentation Layer/iOS App/END-iOS/END-iOS.xcodeproj">
+            location = "group:Presentation Layer/iOS/END-iOS/END-iOS.xcodeproj">
          </FileRef>
       </Group>
    </Group>
