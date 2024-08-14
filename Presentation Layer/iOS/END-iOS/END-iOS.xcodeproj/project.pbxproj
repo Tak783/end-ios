@@ -16,6 +16,13 @@
 		8B37DCB72C6CDD7E00824B46 /* END_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCB62C6CDD7E00824B46 /* END_iOSTests.swift */; };
 		8B37DCC12C6CDD7E00824B46 /* END_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */; };
 		8B37DCC32C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */; };
+		8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */; };
+		8BE06EF22C6D3E9C00FA1D07 /* ListingsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */; };
+		8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF42C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers */; };
+		8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF62C6D3EEB00FA1D07 /* CoreFoundational */; };
+		8BE06EF92C6D3EEB00FA1D07 /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF82C6D3EEB00FA1D07 /* CorePresentation */; };
+		8BE06EFB2C6D3EEB00FA1D07 /* CoreUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EFA2C6D3EEB00FA1D07 /* CoreUIKit */; };
+		8BE06EFD2C6D3EEB00FA1D07 /* ENDListingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,8 @@
 		8B37DCBC2C6CDD7E00824B46 /* END-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "END-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITests.swift; sourceTree = "<group>"; };
 		8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedViewController.swift; sourceTree = "<group>"; };
+		8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingsFeed.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE06EFB2C6D3EEB00FA1D07 /* CoreUIKit in Frameworks */,
+				8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */,
+				8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */,
+				8BE06EFD2C6D3EEB00FA1D07 /* ENDListingsFeature in Frameworks */,
+				8BE06EF92C6D3EEB00FA1D07 /* CorePresentation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +97,7 @@
 				8B37DCB52C6CDD7E00824B46 /* END-iOSTests */,
 				8B37DCBF2C6CDD7E00824B46 /* END-iOSUITests */,
 				8B37DC9D2C6CDD7D00824B46 /* Products */,
+				8BE06EF32C6D3EEB00FA1D07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +114,7 @@
 		8B37DC9E2C6CDD7D00824B46 /* END-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8BE06EED2C6D3E2100FA1D07 /* Feature */,
+				8BE06EED2C6D3E2100FA1D07 /* Feature UI */,
 				8BE06EEC2C6D3E0A00FA1D07 /* Utilities */,
 				8BE06EEB2C6D3E0100FA1D07 /* App Set Up */,
 				8BE06EEA2C6D3DFB00FA1D07 /* Launch */,
@@ -150,21 +165,30 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		8BE06EED2C6D3E2100FA1D07 /* Feature */ = {
+		8BE06EED2C6D3E2100FA1D07 /* Feature UI */ = {
 			isa = PBXGroup;
 			children = (
+				8B37DCA32C6CDD7D00824B46 /* ViewController.swift */,
+				8B37DCA52C6CDD7D00824B46 /* Main.storyboard */,
 				8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */,
 			);
-			path = Feature;
+			path = "Feature UI";
 			sourceTree = "<group>";
 		};
 		8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */ = {
 			isa = PBXGroup;
 			children = (
-				8B37DCA32C6CDD7D00824B46 /* ViewController.swift */,
-				8B37DCA52C6CDD7D00824B46 /* Main.storyboard */,
+				8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */,
+				8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */,
 			);
 			path = "Listings Feed";
+			sourceTree = "<group>";
+		};
+		8BE06EF32C6D3EEB00FA1D07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +207,13 @@
 			dependencies = (
 			);
 			name = "END-iOS";
+			packageProductDependencies = (
+				8BE06EF42C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers */,
+				8BE06EF62C6D3EEB00FA1D07 /* CoreFoundational */,
+				8BE06EF82C6D3EEB00FA1D07 /* CorePresentation */,
+				8BE06EFA2C6D3EEB00FA1D07 /* CoreUIKit */,
+				8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */,
+			);
 			productName = "END-iOS";
 			productReference = 8B37DC9C2C6CDD7D00824B46 /* END-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +305,7 @@
 				8B37DCAC2C6CDD7E00824B46 /* LaunchScreen.storyboard in Resources */,
 				8B37DCA92C6CDD7E00824B46 /* Assets.xcassets in Resources */,
 				8B37DCA72C6CDD7D00824B46 /* Main.storyboard in Resources */,
+				8BE06EF22C6D3E9C00FA1D07 /* ListingsFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +332,7 @@
 			files = (
 				8B37DCA42C6CDD7D00824B46 /* ViewController.swift in Sources */,
 				8B37DCA02C6CDD7D00824B46 /* AppDelegate.swift in Sources */,
+				8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */,
 				8B37DCA22C6CDD7D00824B46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,6 +680,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BE06EF42C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreFeatureLayerPresentationHelpers;
+		};
+		8BE06EF62C6D3EEB00FA1D07 /* CoreFoundational */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreFoundational;
+		};
+		8BE06EF82C6D3EEB00FA1D07 /* CorePresentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CorePresentation;
+		};
+		8BE06EFA2C6D3EEB00FA1D07 /* CoreUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUIKit;
+		};
+		8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ENDListingsFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B37DC942C6CDD7D00824B46 /* Project object */;
 }
