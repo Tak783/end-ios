@@ -8,8 +8,8 @@
 import Foundation
 import XCTest
 
-typealias ListingsAPIURLPoolTests = XCTestCase & ListingsAPIURLPoolTestSpec
-
 protocol ListingsAPIURLPoolTestSpec {
     func test_feedRequest_configuresFeedRequestCorrectly()
 }
+
+typealias ListingsAPIURLPoolTests = XCTestCase & ListingsAPIURLPoolTestSpec

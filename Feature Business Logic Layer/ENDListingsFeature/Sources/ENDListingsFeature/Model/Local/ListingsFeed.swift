@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  ListingsFeed.swift
+//
 //
 //  Created by Tak Mazarura on 14/08/2024.
 //

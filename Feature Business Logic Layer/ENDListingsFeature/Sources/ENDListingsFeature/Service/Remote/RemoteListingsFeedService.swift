@@ -22,19 +22,10 @@ public final class RemoteListingsFeedService: ListingsFeedServiceable {
         self.client = client
     }
     
-    public func loadTransactions(
-        forAccountUID accountUID: String,
-        categoryUID: String,
-        minTransactionTimestamp: Date,
-        maxTransactionTimestamp: Date,
-        completion: @escaping (TransactionsResult) -> Void
+    public func load(
+        completion: @escaping (ListingsFeedResult) -> Void
     ) {
-        let request = URLPool.transactionsRequestBetween(
-            minTransactionTimestamp: minTransactionTimestamp,
-            maxTransactionTimestamp: maxTransactionTimestamp,
-            forAccountUID: accountUID,
-            categoryUID: categoryUID
-        )
+        let request = URLPool.listingsFeedRequest()
         client.performRequest(request) { [weak self] result in
             guard self != nil else { return }
             switch result {
@@ -48,10 +39,10 @@ public final class RemoteListingsFeedService: ListingsFeedServiceable {
                             .jsonDateTimeFormatter
                         )
                         let feed = try decoder.decode(
-                            RemoteTransactionsFeed.self,
+                            RemoteListingsFeed.self,
                             from: data
                         )
-                        completion(.success(feed.feedItems.toModels()))
+                        completion(.success(feed.products.toModels()))
                     }
                 } catch {
                     completion(.failure(Error.invalidData))
@@ -62,8 +53,4 @@ public final class RemoteListingsFeedService: ListingsFeedServiceable {
             }
         }
     }
-}
-
-private struct RemoteListingsFeed: Codable {
-    let feedItems: [RemoteENDProductModel]
 }

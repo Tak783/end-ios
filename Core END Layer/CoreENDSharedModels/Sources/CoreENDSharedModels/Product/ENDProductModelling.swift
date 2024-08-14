@@ -9,5 +9,5 @@ public protocol ENDProductModelling {
     var id: String { get }
     var name: String { get }
     var price: String { get }
-    var image: String { get }
+    var imageURL: String { get }
 }

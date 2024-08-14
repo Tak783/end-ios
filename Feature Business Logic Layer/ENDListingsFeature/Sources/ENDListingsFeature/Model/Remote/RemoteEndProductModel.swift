@@ -11,18 +11,18 @@ public struct RemoteENDProductModel {
     public let id: String
     public let name: String
     public let price: String
-    public let image: String
+    public let imageURL: String
     
     public init(
         id: String,
         name: String,
         price: String,
-        image: String
+        imageURL: String
     ) {
         self.id = id
         self.name = name
         self.price = price
-        self.image = image
+        self.imageURL = imageURL
     }
 }
 
@@ -33,9 +33,30 @@ extension RemoteENDProductModel: Decodable {
         case id
         case name
         case price
-        case image
+        case imageURL = "image"
     }
 }
 
 // MARK: - ENDProductModelling
 extension RemoteENDProductModel: ENDProductModelling {}
+
+// MARK: - To production model
+extension RemoteENDProductModel {
+    func toModel() -> ENDProductModel {
+        ENDProductModel(
+            id: id,
+            name: name,
+            price: price,
+            imageURL: imageURL
+        )
+    }
+}
+
+// MARK: - To production models array
+extension Array where Element == RemoteENDProductModel {
+    func toModels() -> [ENDProductModel] {
+        self.compactMap {
+            $0.toModel()
+        }
+    }
+}
