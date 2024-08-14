@@ -6,3 +6,5 @@
 //
 
 import Foundation
+import CoreFoundational
+import CoreENDSharedModels

@@ -8,8 +8,8 @@
 import XCTest
 import CoreFoundational
 import CoreNetworking
-import MockNetworking
 @testable import ENDListingsFeature
+import MockNetworking
 
 final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
     func test_init_setsInitialVariablesCorrectly() {
