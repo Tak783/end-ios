@@ -99,12 +99,10 @@
 		8B37DC9E2C6CDD7D00824B46 /* END-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8B37DC9F2C6CDD7D00824B46 /* AppDelegate.swift */,
-				8B37DCA12C6CDD7D00824B46 /* SceneDelegate.swift */,
-				8B37DCA32C6CDD7D00824B46 /* ViewController.swift */,
-				8B37DCA52C6CDD7D00824B46 /* Main.storyboard */,
-				8B37DCA82C6CDD7E00824B46 /* Assets.xcassets */,
-				8B37DCAA2C6CDD7E00824B46 /* LaunchScreen.storyboard */,
+				8BE06EED2C6D3E2100FA1D07 /* Feature */,
+				8BE06EEC2C6D3E0A00FA1D07 /* Utilities */,
+				8BE06EEB2C6D3E0100FA1D07 /* App Set Up */,
+				8BE06EEA2C6D3DFB00FA1D07 /* Launch */,
 				8B37DCAD2C6CDD7E00824B46 /* Info.plist */,
 			);
 			path = "END-iOS";
@@ -125,6 +123,48 @@
 				8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */,
 			);
 			path = "END-iOSUITests";
+			sourceTree = "<group>";
+		};
+		8BE06EEA2C6D3DFB00FA1D07 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				8B37DCAA2C6CDD7E00824B46 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		8BE06EEB2C6D3E0100FA1D07 /* App Set Up */ = {
+			isa = PBXGroup;
+			children = (
+				8B37DC9F2C6CDD7D00824B46 /* AppDelegate.swift */,
+				8B37DCA12C6CDD7D00824B46 /* SceneDelegate.swift */,
+			);
+			path = "App Set Up";
+			sourceTree = "<group>";
+		};
+		8BE06EEC2C6D3E0A00FA1D07 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8B37DCA82C6CDD7E00824B46 /* Assets.xcassets */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8BE06EED2C6D3E2100FA1D07 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8B37DCA32C6CDD7D00824B46 /* ViewController.swift */,
+				8B37DCA52C6CDD7D00824B46 /* Main.storyboard */,
+			);
+			path = "Listings Feed";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
