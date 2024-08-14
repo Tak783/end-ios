@@ -23,6 +23,13 @@
    </Group>
    <Group
       location = "container:"
+      name = "Core Feature Layer Presentation Helpers">
+      <FileRef
+         location = "group:Core Feature Layer Presentation Helpers/CoreFeatureLayerPresentationHelpers">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Presentation Layer">
       <Group
          location = "container:"
