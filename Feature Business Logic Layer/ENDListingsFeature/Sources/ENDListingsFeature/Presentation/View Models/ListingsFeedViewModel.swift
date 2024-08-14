@@ -33,10 +33,6 @@ public final class ListingsFeedViewModel {
     }
 }
 
-public protocol ListingsFeedViewModelling {
-    func loadFeed()
-}
-
 // MARK: - ListingsFeedViewModelling
 extension ListingsFeedViewModel: ListingsFeedViewModelling {
     public func loadFeed() {
