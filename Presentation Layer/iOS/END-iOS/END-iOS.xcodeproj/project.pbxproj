@@ -23,6 +23,7 @@
 		8BE06EF92C6D3EEB00FA1D07 /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF82C6D3EEB00FA1D07 /* CorePresentation */; };
 		8BE06EFB2C6D3EEB00FA1D07 /* CoreUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EFA2C6D3EEB00FA1D07 /* CoreUIKit */; };
 		8BE06EFD2C6D3EEB00FA1D07 /* ENDListingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */; };
+		8BE06EFF2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedViewController.swift; sourceTree = "<group>"; };
 		8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingsFeed.storyboard; sourceTree = "<group>"; };
+		8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				8B37DCAA2C6CDD7E00824B46 /* LaunchScreen.storyboard */,
+				8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				8B37DCA42C6CDD7D00824B46 /* ViewController.swift in Sources */,
 				8B37DCA02C6CDD7D00824B46 /* AppDelegate.swift in Sources */,
 				8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */,
+				8BE06EFF2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift in Sources */,
 				8B37DCA22C6CDD7D00824B46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
