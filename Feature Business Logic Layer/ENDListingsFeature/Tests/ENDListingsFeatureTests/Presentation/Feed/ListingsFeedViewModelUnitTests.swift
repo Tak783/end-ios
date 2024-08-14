@@ -16,15 +16,30 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
     func test_init_setsInitialVariablesCorrectly() {
         let title = "Comme Des Garcons"
         let client = HTTPClientSpy()
-        let remoteListingsFeedService = RemoteListingsFeedService(client: client)
-        let (sut, _) = make_sut(listingsFeedService: remoteListingsFeedService, title: title)
+        let remoteListingsFeedService = RemoteListingsFeedService(
+            client: client
+        )
+        let (sut, _) = make_sut(
+            listingsFeedService: remoteListingsFeedService, 
+            title: title
+        )
 
         XCTAssertEqual(sut.title, title)
         XCTAssertNotNil(sut.accountsFeedService as? RemoteListingsFeedService)
     }
     
     func test_loadFeed_setsLoadStateToTrue() {
+        let client = HTTPClientSpy()
+        let remoteListingsFeedService = RemoteListingsFeedService(
+            client: client
+        )
+        let (sut, spy) = make_sut(
+            listingsFeedService: remoteListingsFeedService
+        )
         
+        sut.loadFeed()
+
+        XCTAssertEqual(spy.isLoading, true)
     }
     
     func test_loadFeed_triggersAPICall_whichSuccessOrFailure_setsLoadStateToFalse() {

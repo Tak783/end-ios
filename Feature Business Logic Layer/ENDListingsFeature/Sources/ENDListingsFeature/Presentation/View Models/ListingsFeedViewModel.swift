@@ -32,3 +32,14 @@ public final class ListingsFeedViewModel {
         self.coordinator = coordinator
     }
 }
+
+public protocol ListingsFeedViewModelling {
+    func loadFeed()
+}
+
+// MARK: - ListingsFeedViewModelling
+extension ListingsFeedViewModel: ListingsFeedViewModelling {
+    public func loadFeed() {
+        onLoadingStateChange?(true)
+    }
+}
