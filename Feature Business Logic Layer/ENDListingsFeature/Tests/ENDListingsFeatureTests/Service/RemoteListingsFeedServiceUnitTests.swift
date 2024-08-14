@@ -5,7 +5,6 @@
 //  Created by Tak Mazarura on 14/08/2024.
 //
 
-
 import CoreTesting
 import CoreNetworking
 import MockNetworking
@@ -127,4 +126,3 @@ extension RemoteListingsFeedServiceUnitTests {
         return (sut, client)
     }
 }
-
