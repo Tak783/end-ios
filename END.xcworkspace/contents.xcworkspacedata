@@ -44,6 +44,13 @@
    </Group>
    <Group
       location = "container:"
+      name = "Core Presentation Layer">
+      <FileRef
+         location = "group:Core Presentation Layer/CorePresentation">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Presentation Layer">
       <Group
          location = "container:"
