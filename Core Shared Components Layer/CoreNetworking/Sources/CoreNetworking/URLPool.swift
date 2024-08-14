@@ -29,7 +29,7 @@ public struct URLPool {
         }
         return fullURL
     }
-
+                                        
     private static func configureURLComponents(
         scheme: String, 
         host: String,

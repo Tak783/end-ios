@@ -5,7 +5,7 @@
 //  Created by Tak Mazarura on 14/08/2024.
 //
 
-import Foundation
+import CoreENDSharedModels
 
 public struct RemoteENDProductModel {
     public let id: String
@@ -27,7 +27,7 @@ public struct RemoteENDProductModel {
 }
 
 // MARK: - Decodable
-extension ENDProduct: Decodable {
+extension RemoteENDProductModel: Decodable {
     // MARK: - Coding Keys
     private enum CodingKeys: String, CodingKey {
         case id
@@ -38,4 +38,4 @@ extension ENDProduct: Decodable {
 }
 
 // MARK: - ENDProductModelling
-extension ENDProduct: ENDProductModelling {}
+extension RemoteENDProductModel: ENDProductModelling {}
