@@ -12,13 +12,13 @@ public struct RemoteENDProductModel {
     public let id: String
     public let name: String
     public let price: String
-    public let imageURL: URL
+    public let imageURL: URL?
     
     public init(
         id: String,
         name: String,
         price: String,
-        imageURL: URL
+        imageURL: URL?
     ) {
         self.id = id
         self.name = name
@@ -35,6 +35,15 @@ extension RemoteENDProductModel: Decodable {
         case name
         case price
         case imageURL = "image"
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.price = try container.decode(String.self, forKey: .price)
+        let imageURLString = try container.decode(String.self, forKey: .imageURL)
+        self.imageURL = URL(string: imageURLString)
     }
 }
 

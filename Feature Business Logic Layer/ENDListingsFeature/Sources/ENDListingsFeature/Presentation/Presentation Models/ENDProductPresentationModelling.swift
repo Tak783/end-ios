@@ -11,5 +11,5 @@ public protocol ENDProductPresentationModelling {
     var id: String { get }
     var name: String { get }
     var price: String { get }
-    var imageURL: URL { get }
+    var imageURL: URL? { get }
 }

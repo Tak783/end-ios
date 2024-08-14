@@ -11,13 +11,13 @@ public struct ENDProductModel: Equatable {
     public let id: String
     public let name: String
     public let price: String
-    public let imageURL: URL
+    public let imageURL: URL?
     
     public init(
         id: String,
         name: String,
         price: String,
-        imageURL: URL
+        imageURL: URL?
     ) {
         self.id = id
         self.name = name
