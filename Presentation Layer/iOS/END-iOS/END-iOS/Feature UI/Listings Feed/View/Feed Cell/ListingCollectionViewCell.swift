@@ -8,6 +8,7 @@
 import Foundation
 import CorePresentation
 import ENDListingsFeature
+import Kingfisher
 import SnapKit
 import UIKit
 
@@ -42,10 +43,12 @@ extension ListingCollectionViewCell {
         setUpSubviews()
     }
     
-    func update(withListing listing: ENDProductPresentationModelling) {
-        //productImageView.image = listing.imageURL
+    func update(
+        withListing listing: ENDProductPresentationModelling
+    ) {
         productNameLabel.text = listing.name
         productPriceLabel.text = listing.price
+        updateListingImage(withImageURL: listing.imageURL)
     }
 }
 
@@ -81,6 +84,17 @@ extension ListingCollectionViewCell {
             make.leading.equalToSuperview().offset(Layout.regularMargin)
             make.trailing.equalToSuperview().offset(-Layout.regularMargin)
         }
+    }
+}
+
+// MARK: - Helper Methods
+extension ListingCollectionViewCell {
+    private func updateListingImage(withImageURL imageURL: URL?) {
+        guard let imageURL else {
+            return
+        }
+        let source = Source.network(imageURL)
+        productImageView.kf.setImage(with: source)
     }
 }
 
