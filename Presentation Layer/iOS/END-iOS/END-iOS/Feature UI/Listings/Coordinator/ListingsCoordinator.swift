@@ -54,7 +54,6 @@ extension ListingsCoordinator: ListingsCoordinating {
     func navigateToListingDetail(
         forListing listing: ENDProductModel
     ) {
-        let listingsFeedService = RemoteListingsFeedService(client: client)
         let accountsFeedViewController = ListingDetailComposer.compose(
             withListing: listing,
             coordinator: self

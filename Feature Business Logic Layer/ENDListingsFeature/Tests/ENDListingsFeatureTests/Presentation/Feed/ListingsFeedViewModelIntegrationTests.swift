@@ -12,7 +12,7 @@ import CoreENDSharedModels
 @testable import ENDListingsFeature
 import MockNetworking
 
-final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
+final class ListingsFeedViewModelIntegrationTests: ListingsFeedViewModelIntegrationTest {
     func test_init_setsInitialVariablesCorrectly() {
         let title = "Comme Des Garcons"
         let client = HTTPClientSpy()
@@ -119,7 +119,7 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
 }
 
 // MARK: - Make SUT
-extension ListingsFeedViewModelUnitTests {
+extension ListingsFeedViewModelIntegrationTests {
     private func make_sut(
         listingsFeedService: ListingsFeedServiceable,
         title: String = "Feed"

@@ -16,4 +16,4 @@ protocol ListingsFeedViewModelUnitTestSpec {
     func test_loadFeed_triggersAPICall_whichOnSuccess_returnsListings()
 }
 
-typealias ListingsFeedViewModelUnitTest = XCTestCase & ListingsFeedViewModelUnitTestSpec
+typealias ListingsFeedViewModelIntegrationTest = XCTestCase & ListingsFeedViewModelUnitTestSpec
