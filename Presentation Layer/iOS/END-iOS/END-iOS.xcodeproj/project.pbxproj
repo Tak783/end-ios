@@ -14,6 +14,7 @@
 		8B37DCB72C6CDD7E00824B46 /* END_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCB62C6CDD7E00824B46 /* END_iOSTests.swift */; };
 		8B37DCC12C6CDD7E00824B46 /* END_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */; };
 		8B37DCC32C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */; };
+		8BA8BE0F2C6E24FB00A88136 /* ListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8BE0E2C6E24FB00A88136 /* ListingDetailViewController.swift */; };
 		8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */; };
 		8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF42C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers */; };
 		8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF62C6D3EEB00FA1D07 /* CoreFoundational */; };
@@ -59,6 +60,7 @@
 		8B37DCBC2C6CDD7E00824B46 /* END-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "END-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITests.swift; sourceTree = "<group>"; };
 		8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8BA8BE0E2C6E24FB00A88136 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
 		8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedViewController.swift; sourceTree = "<group>"; };
 		8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchCoordinator.swift; sourceTree = "<group>"; };
 		8BE06F032C6D3FF700FA1D07 /* ListingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsCoordinator.swift; sourceTree = "<group>"; };
@@ -150,6 +152,22 @@
 			path = "END-iOSUITests";
 			sourceTree = "<group>";
 		};
+		8BA8BE0C2C6E24D800A88136 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8BA8BE0E2C6E24FB00A88136 /* ListingDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8BA8BE0D2C6E24E300A88136 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BE06F0E2C6E05CB00FA1D07 /* Feed Cell */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
 		8BE06EEA2C6D3DFB00FA1D07 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,18 +197,18 @@
 		8BE06EED2C6D3E2100FA1D07 /* Feature UI */ = {
 			isa = PBXGroup;
 			children = (
-				8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */,
+				8BE06EEE2C6D3E2600FA1D07 /* Listings */,
 			);
 			path = "Feature UI";
 			sourceTree = "<group>";
 		};
-		8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */ = {
+		8BE06EEE2C6D3E2600FA1D07 /* Listings */ = {
 			isa = PBXGroup;
 			children = (
 				8BE06F022C6D3FEB00FA1D07 /* Coordinator */,
 				8BE06F002C6D3FDE00FA1D07 /* View */,
 			);
-			path = "Listings Feed";
+			path = Listings;
 			sourceTree = "<group>";
 		};
 		8BE06EF32C6D3EEB00FA1D07 /* Frameworks */ = {
@@ -203,7 +221,8 @@
 		8BE06F002C6D3FDE00FA1D07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8BE06F0E2C6E05CB00FA1D07 /* Feed Cell */,
+				8BA8BE0D2C6E24E300A88136 /* Supporting Views */,
+				8BA8BE0C2C6E24D800A88136 /* Detail */,
 				8BE06F012C6D3FE200FA1D07 /* Feed */,
 			);
 			path = View;
@@ -388,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA8BE0F2C6E24FB00A88136 /* ListingDetailViewController.swift in Sources */,
 				8BE06F102C6E06EC00FA1D07 /* ListingCollectionViewCell.swift in Sources */,
 				8B37DCA02C6CDD7D00824B46 /* AppDelegate.swift in Sources */,
 				8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */,
