@@ -15,7 +15,6 @@
 		8B37DCC12C6CDD7E00824B46 /* END_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */; };
 		8B37DCC32C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */; };
 		8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */; };
-		8BE06EF22C6D3E9C00FA1D07 /* ListingsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */; };
 		8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF42C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers */; };
 		8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF62C6D3EEB00FA1D07 /* CoreFoundational */; };
 		8BE06EF92C6D3EEB00FA1D07 /* CorePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF82C6D3EEB00FA1D07 /* CorePresentation */; };
@@ -25,6 +24,8 @@
 		8BE06F042C6D3FF700FA1D07 /* ListingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06F032C6D3FF700FA1D07 /* ListingsCoordinator.swift */; };
 		8BE06F062C6D40B100FA1D07 /* CoreENDSharedModels in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06F052C6D40B100FA1D07 /* CoreENDSharedModels */; };
 		8BE06F092C6D415800FA1D07 /* ListingsFeedComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06F082C6D415800FA1D07 /* ListingsFeedComposer.swift */; };
+		8BE06F0D2C6E05BD00FA1D07 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06F0C2C6E05BD00FA1D07 /* SnapKit */; };
+		8BE06F102C6E06EC00FA1D07 /* ListingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06F0F2C6E06EC00FA1D07 /* ListingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +58,10 @@
 		8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITests.swift; sourceTree = "<group>"; };
 		8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedViewController.swift; sourceTree = "<group>"; };
-		8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingsFeed.storyboard; sourceTree = "<group>"; };
 		8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchCoordinator.swift; sourceTree = "<group>"; };
 		8BE06F032C6D3FF700FA1D07 /* ListingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsCoordinator.swift; sourceTree = "<group>"; };
 		8BE06F082C6D415800FA1D07 /* ListingsFeedComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedComposer.swift; sourceTree = "<group>"; };
+		8BE06F0F2C6E06EC00FA1D07 /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				8BE06EFB2C6D3EEB00FA1D07 /* CoreUIKit in Frameworks */,
 				8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */,
 				8BE06F062C6D40B100FA1D07 /* CoreENDSharedModels in Frameworks */,
+				8BE06F0D2C6E05BD00FA1D07 /* SnapKit in Frameworks */,
 				8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */,
 				8BE06EFD2C6D3EEB00FA1D07 /* ENDListingsFeature in Frameworks */,
 				8BE06EF92C6D3EEB00FA1D07 /* CorePresentation in Frameworks */,
@@ -118,11 +120,11 @@
 		8B37DC9E2C6CDD7D00824B46 /* END-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8BE06EED2C6D3E2100FA1D07 /* Feature UI */,
-				8BE06EEC2C6D3E0A00FA1D07 /* Utilities */,
 				8BE06EEB2C6D3E0100FA1D07 /* App Set Up */,
-				8BE06EEA2C6D3DFB00FA1D07 /* Launch */,
+				8BE06EED2C6D3E2100FA1D07 /* Feature UI */,
 				8B37DCAD2C6CDD7E00824B46 /* Info.plist */,
+				8BE06EEA2C6D3DFB00FA1D07 /* Launch */,
+				8BE06EEC2C6D3E0A00FA1D07 /* Utilities */,
 			);
 			path = "END-iOS";
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 		8BE06EEE2C6D3E2600FA1D07 /* Listings Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8BE06F022C6D3FEB00FA1D07 /* Coordinator */,
 				8BE06F002C6D3FDE00FA1D07 /* View */,
 			);
 			path = "Listings Feed";
@@ -196,8 +199,7 @@
 		8BE06F002C6D3FDE00FA1D07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8BE06F072C6D414A00FA1D07 /* Composer */,
-				8BE06F022C6D3FEB00FA1D07 /* Coordinator */,
+				8BE06F0E2C6E05CB00FA1D07 /* Feed Cell */,
 				8BE06F012C6D3FE200FA1D07 /* Feed */,
 			);
 			path = View;
@@ -206,7 +208,7 @@
 		8BE06F012C6D3FE200FA1D07 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				8BE06EF12C6D3E9C00FA1D07 /* ListingsFeed.storyboard */,
+				8BE06F072C6D414A00FA1D07 /* Composer */,
 				8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */,
 			);
 			path = Feed;
@@ -226,6 +228,14 @@
 				8BE06F082C6D415800FA1D07 /* ListingsFeedComposer.swift */,
 			);
 			path = Composer;
+			sourceTree = "<group>";
+		};
+		8BE06F0E2C6E05CB00FA1D07 /* Feed Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8BE06F0F2C6E06EC00FA1D07 /* ListingCollectionViewCell.swift */,
+			);
+			path = "Feed Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +261,7 @@
 				8BE06EFA2C6D3EEB00FA1D07 /* CoreUIKit */,
 				8BE06EFC2C6D3EEB00FA1D07 /* ENDListingsFeature */,
 				8BE06F052C6D40B100FA1D07 /* CoreENDSharedModels */,
+				8BE06F0C2C6E05BD00FA1D07 /* SnapKit */,
 			);
 			productName = "END-iOS";
 			productReference = 8B37DC9C2C6CDD7D00824B46 /* END-iOS.app */;
@@ -324,6 +335,9 @@
 				Base,
 			);
 			mainGroup = 8B37DC932C6CDD7D00824B46;
+			packageReferences = (
+				8BE06F0B2C6E05BD00FA1D07 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8B37DC9D2C6CDD7D00824B46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,7 +356,6 @@
 			files = (
 				8B37DCAC2C6CDD7E00824B46 /* LaunchScreen.storyboard in Resources */,
 				8B37DCA92C6CDD7E00824B46 /* Assets.xcassets in Resources */,
-				8BE06EF22C6D3E9C00FA1D07 /* ListingsFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE06F102C6E06EC00FA1D07 /* ListingCollectionViewCell.swift in Sources */,
 				8B37DCA02C6CDD7D00824B46 /* AppDelegate.swift in Sources */,
 				8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */,
 				8BE06F042C6D3FF700FA1D07 /* ListingsCoordinator.swift in Sources */,
@@ -712,6 +726,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		8BE06F0B2C6E05BD00FA1D07 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		8BE06EF42C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -736,6 +761,11 @@
 		8BE06F052C6D40B100FA1D07 /* CoreENDSharedModels */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreENDSharedModels;
+		};
+		8BE06F0C2C6E05BD00FA1D07 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BE06F0B2C6E05BD00FA1D07 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
