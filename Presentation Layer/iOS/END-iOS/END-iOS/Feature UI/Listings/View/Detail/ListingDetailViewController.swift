@@ -166,7 +166,7 @@ extension ListingDetailViewController {
 // MARK: - User Interaction
 extension ListingDetailViewController {
     @objc private func didTouchUpInsideBackButton() {
-        
+        feedViewModel?.didRequestToCloseListingDetail()
     }
 }
 
