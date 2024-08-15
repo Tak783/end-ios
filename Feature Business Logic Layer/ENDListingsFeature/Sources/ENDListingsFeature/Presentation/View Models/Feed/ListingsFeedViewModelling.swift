@@ -17,4 +17,5 @@ public protocol ListingsFeedViewModelling {
     var feedItemPresentaionModels: [ENDProductPresentationModelling] { get }
     
     func loadFeed()
+    func didRequestToNavigateDetailForListing(atIndex index: Int)
 }

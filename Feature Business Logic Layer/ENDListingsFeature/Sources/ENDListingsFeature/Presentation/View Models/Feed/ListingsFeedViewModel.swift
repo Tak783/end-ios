@@ -47,6 +47,16 @@ extension ListingsFeedViewModel: ListingsFeedViewModelling {
             self.onLoadingStateChange?(false)
         }
     }
+    
+    public func didRequestToNavigateDetailForListing(
+        atIndex index: Int
+    ) {
+        guard feedItemPresentaionModels.indices.contains(index) else {
+            return
+        }
+        let listing = listingModels[index]
+        coordinator?.navigateToListingDetail(forListing: listing)
+    }
 }
 
 // MARK: - Load Listings Helpers
