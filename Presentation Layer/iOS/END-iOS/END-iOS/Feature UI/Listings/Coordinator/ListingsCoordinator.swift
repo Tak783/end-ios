@@ -32,13 +32,15 @@ final class ListingsCoordinator: ChildCoordinatorable, ParentCoordinatorable {
         navigateToListingsFeed()
     }
     
-    func didEnd(childCoordinator: CorePresentation.ChildCoordinatorable) {
+    func didEnd(
+        childCoordinator: CorePresentation.ChildCoordinatorable
+    ) {
         efficientPrint("Did close Child Coordinator")
     }
 }
  
 // MARK: - ListingsFeedCoordinating
-extension ListingsCoordinator: ListingsFeedCoordinating {
+extension ListingsCoordinator: ListingsCoordinating {
     func navigateToListingsFeed() {
         let listingsFeedService = RemoteListingsFeedService(client: client)
         let accountsFeedViewController = ListingsFeedComposer.compose(
@@ -52,6 +54,12 @@ extension ListingsCoordinator: ListingsFeedCoordinating {
     func navigateToListingDetail(
         forListing listing: ENDProductModel
     ) {
+        let listingsFeedService = RemoteListingsFeedService(client: client)
+        let accountsFeedViewController = ListingDetailComposer.compose(
+            withListing: listing,
+            coordinator: self
+        )
+        router.navigateToViewController(accountsFeedViewController, withMethod: .push)
         
     }
 }

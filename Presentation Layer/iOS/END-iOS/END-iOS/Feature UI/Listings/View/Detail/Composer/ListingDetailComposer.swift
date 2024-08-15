@@ -14,8 +14,7 @@ import ENDListingsFeature
 
 final class ListingDetailComposer {
     static func compose(
-        with service: ListingsFeedServiceable,
-        listing: ENDProductModelling,
+        withListing listing: ENDProductModelling,
         coordinator: ListingsCoordinating
     ) -> ListingDetailViewController {
         let viewModel = ListingDetailViewModel(

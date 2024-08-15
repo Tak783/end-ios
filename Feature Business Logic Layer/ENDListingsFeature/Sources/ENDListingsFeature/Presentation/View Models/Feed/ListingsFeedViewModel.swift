@@ -19,12 +19,12 @@ public final class ListingsFeedViewModel {
 
     private let listingsFeedService: ListingsFeedServiceable
     private var listingModels = [ENDProductModel]()
-    private weak var coordinator: ListingsFeedCoordinating?
+    private weak var coordinator: ListingsCoordinating?
 
     public init(
         listingsFeedService: ListingsFeedServiceable,
         title: String,
-        coordinator: ListingsFeedCoordinating?
+        coordinator: ListingsCoordinating?
     ) {
         self.title = title
         self.listingsFeedService = listingsFeedService

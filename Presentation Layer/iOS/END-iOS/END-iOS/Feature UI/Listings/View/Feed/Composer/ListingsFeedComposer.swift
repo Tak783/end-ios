@@ -16,7 +16,7 @@ final class ListingsFeedComposer {
     static func compose(
         with service: ListingsFeedServiceable,
         title: String,
-        coordinator: ListingsFeedCoordinating
+        coordinator: ListingsCoordinating
     ) -> ListingsFeedViewController {
         let viewModel = ListingsFeedViewModel(
             listingsFeedService: service,
