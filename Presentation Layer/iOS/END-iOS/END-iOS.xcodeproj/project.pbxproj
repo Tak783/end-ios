@@ -27,6 +27,7 @@
 		8BE06F0D2C6E05BD00FA1D07 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06F0C2C6E05BD00FA1D07 /* SnapKit */; };
 		8BE06F102C6E06EC00FA1D07 /* ListingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06F0F2C6E06EC00FA1D07 /* ListingCollectionViewCell.swift */; };
 		8BE06F162C6E0B3200FA1D07 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06F152C6E0B3200FA1D07 /* Kingfisher */; };
+		8BE06F192C6E122000FA1D07 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06F182C6E122000FA1D07 /* MBProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 				8BE06EFB2C6D3EEB00FA1D07 /* CoreUIKit in Frameworks */,
 				8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */,
 				8BE06F062C6D40B100FA1D07 /* CoreENDSharedModels in Frameworks */,
+				8BE06F192C6E122000FA1D07 /* MBProgressHUD in Frameworks */,
 				8BE06F0D2C6E05BD00FA1D07 /* SnapKit in Frameworks */,
 				8BE06F162C6E0B3200FA1D07 /* Kingfisher in Frameworks */,
 				8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */,
@@ -265,6 +267,7 @@
 				8BE06F052C6D40B100FA1D07 /* CoreENDSharedModels */,
 				8BE06F0C2C6E05BD00FA1D07 /* SnapKit */,
 				8BE06F152C6E0B3200FA1D07 /* Kingfisher */,
+				8BE06F182C6E122000FA1D07 /* MBProgressHUD */,
 			);
 			productName = "END-iOS";
 			productReference = 8B37DC9C2C6CDD7D00824B46 /* END-iOS.app */;
@@ -341,6 +344,7 @@
 			packageReferences = (
 				8BE06F0B2C6E05BD00FA1D07 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8BE06F142C6E0B3200FA1D07 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8BE06F172C6E122000FA1D07 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 			);
 			productRefGroup = 8B37DC9D2C6CDD7D00824B46 /* Products */;
 			projectDirPath = "";
@@ -747,6 +751,14 @@
 				minimumVersion = 7.12.0;
 			};
 		};
+		8BE06F172C6E122000FA1D07 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -783,6 +795,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8BE06F142C6E0B3200FA1D07 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		8BE06F182C6E122000FA1D07 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BE06F172C6E122000FA1D07 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
