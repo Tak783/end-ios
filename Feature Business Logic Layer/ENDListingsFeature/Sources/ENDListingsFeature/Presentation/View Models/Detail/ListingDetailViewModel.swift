@@ -27,4 +27,8 @@ public final class ListingDetailViewModel {
 }
 
 // MARK: - ListingDetailViewModelling
-extension ListingDetailViewModel: ListingDetailViewModelling {}
+extension ListingDetailViewModel: ListingDetailViewModelling {
+    public func didRequestToCloseListingDetail() {
+        coordinator?.closeListingDetail()
+    }
+}

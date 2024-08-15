@@ -12,6 +12,7 @@ import CoreENDSharedModels
 final class SpyListingsCoordinator: ListingsCoordinating {
     var didNavigateToListingsFeed = false
     var didNavigateToListingsDetail = false
+    var didNavigateBackFromListingDetail = false
     
     func navigateToListingsFeed() {
         didNavigateToListingsFeed = true
@@ -21,5 +22,9 @@ final class SpyListingsCoordinator: ListingsCoordinating {
         forListing listing: ENDProductModel
     ) {
         didNavigateToListingsDetail = true
+    }
+    
+    func closeListingDetail() {
+        didNavigateBackFromListingDetail = true
     }
 }

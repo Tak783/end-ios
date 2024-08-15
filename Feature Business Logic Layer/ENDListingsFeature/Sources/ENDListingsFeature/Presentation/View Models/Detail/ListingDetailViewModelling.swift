@@ -9,4 +9,6 @@ import Foundation
 
 public protocol ListingDetailViewModelling {
     var presentationModel: ENDProductDetailPresentationModelling { get }
+    
+    func didRequestToCloseListingDetail()
 }

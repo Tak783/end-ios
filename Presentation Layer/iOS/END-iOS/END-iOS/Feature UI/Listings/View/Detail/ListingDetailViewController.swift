@@ -65,6 +65,7 @@ extension ListingDetailViewController {
     private func setUpSubviews() {
         addSubviewsToView()
         addConstraintsToSubviews()
+        setUpBackButton()
     }
     
     private func addSubviewsToView() {
@@ -92,6 +93,26 @@ extension ListingDetailViewController {
             make.trailing.equalToSuperview().offset(-Layout.regularMargin)
             make.height.height.equalTo(400)
         }
+    }
+    
+    private func setUpBackButton() {
+        let backButtonImage = UIImage(
+            systemName: "chevron.left"
+        )?
+            .withConfiguration(UIImage.SymbolConfiguration(pointSize: 18, weight: .medium))
+            .withTintColor(.darkGray, renderingMode: .alwaysOriginal)
+        
+        let backButton = UIBarButtonItem(
+            image: backButtonImage,
+            style: .plain,
+            target: self,
+            action: #selector(self.didTouchUpInsideBackButton)
+        )
+        
+        backButton.title = .empty
+        
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = backButton
     }
 }
 
@@ -139,6 +160,13 @@ extension ListingDetailViewController {
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         return imageView
+    }
+}
+
+// MARK: - User Interaction
+extension ListingDetailViewController {
+    @objc private func didTouchUpInsideBackButton() {
+        
     }
 }
 

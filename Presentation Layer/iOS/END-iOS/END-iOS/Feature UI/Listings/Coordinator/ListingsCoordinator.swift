@@ -60,6 +60,9 @@ extension ListingsCoordinator: ListingsCoordinating {
             coordinator: self
         )
         router.navigateToViewController(accountsFeedViewController, withMethod: .push)
-        
+    }
+    
+    func closeListingDetail() {
+        router.popViewController()
     }
 }

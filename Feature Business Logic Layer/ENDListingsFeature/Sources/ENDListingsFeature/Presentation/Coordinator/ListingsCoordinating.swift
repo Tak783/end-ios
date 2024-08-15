@@ -12,4 +12,5 @@ public protocol ListingsCoordinating: AnyObject {
     func navigateToListingDetail(
         forListing listing: ENDProductModel
     )
+    func closeListingDetail()
 }
