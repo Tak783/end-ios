@@ -11,17 +11,16 @@ import CoreENDSharedModels
 
 public final class ListingsFeedViewModel {
     public var onLoadingStateChange: Observer<Bool>?
-    public var onFeedLoadError: Observer<String?>?
-    public var onFeedLoadSuccess: Observer<[ENDProductModel]>?
+    public var onFeedLoadError: Observer<Void>?
+    public var onFeedLoadSuccess: Observer<Void>?
     
-    public var title: String
-    public var listingsFeedService: ListingsFeedServiceable
-
-    public weak var coordinator: ListingsFeedCoordinating?
+    public private (set) var title: String
     public private (set) var feedItemPresentaionModels = [ENDProductPresentationModelling]()
 
+    private let listingsFeedService: ListingsFeedServiceable
     private var listingModels = [ENDProductModel]()
-    
+    private weak var coordinator: ListingsFeedCoordinating?
+
     public init(
         listingsFeedService: ListingsFeedServiceable,
         title: String,
@@ -43,8 +42,7 @@ extension ListingsFeedViewModel: ListingsFeedViewModelling {
             case let .success(listings):
                 self.didLoadListings(listings)
             case .failure(let error):
-                efficientPrint(error.localizedDescription)
-                self.onFeedLoadError?("Failed to Load Feed")
+                self.didFailToLoadListings(withError: error)
             }
             self.onLoadingStateChange?(false)
         }
@@ -58,8 +56,12 @@ extension ListingsFeedViewModel {
         feedItemPresentaionModels = Self.adaptAccountToPresentationModels(
             for: listings
         )
-        onFeedLoadError?(.none)
-        onFeedLoadSuccess?(listings)
+        onFeedLoadSuccess?(())
+    }
+    
+    private func didFailToLoadListings(withError error: Error) {
+        efficientPrint(error.localizedDescription)
+        onFeedLoadError?(())
     }
 }
 

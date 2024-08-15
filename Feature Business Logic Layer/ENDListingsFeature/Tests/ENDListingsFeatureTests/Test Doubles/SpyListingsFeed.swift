@@ -10,9 +10,9 @@ import ENDListingsFeature
 import Foundation
 
 final class SpyListingsFeed: NSObject {
-    var isLoading: Bool = false
-    var error: String?
-    var listings: [ENDProductModel]?
+    var isLoading = false
+    var didFailToLoadFeed = false
+    var didSuccessfullyLoadFeed = false
 
     var viewModel: ListingsFeedViewModel
 
@@ -29,14 +29,14 @@ final class SpyListingsFeed: NSObject {
             self.isLoading = isLoading
         }
 
-        viewModel.onFeedLoadError = { [weak self] error in
+        viewModel.onFeedLoadError = { [weak self] _ in
             guard let self = self else { return }
-            self.error = error
+            self.didFailToLoadFeed = true
         }
 
-        viewModel.onFeedLoadSuccess = { [weak self] listings in
+        viewModel.onFeedLoadSuccess = { [weak self] _ in
             guard let self = self else { return }
-            self.listings = listings
+            self.didSuccessfullyLoadFeed = true
         }
     }
 }

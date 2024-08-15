@@ -25,7 +25,6 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
         )
 
         XCTAssertEqual(sut.title, title)
-        XCTAssertNotNil(sut.accountsFeedService as? RemoteListingsFeedService)
     }
     
     func test_loadFeed_setsLoadStateToTrue() {
@@ -79,7 +78,12 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
         sut.loadFeed()
         client.complete(with: expectedError)
 
-        XCTAssertNotNil(spy.error)
+        XCTAssertEqual(
+            spy.didFailToLoadFeed, true
+        )
+        XCTAssertEqual(
+            spy.didSuccessfullyLoadFeed, false
+        )
     }
     
     func test_loadFeed_triggersAPICall_whichOnSuccess_returnsListings() {
@@ -108,9 +112,9 @@ final class ListingsFeedViewModelUnitTests: ListingsFeedViewModelUnitTest {
         client.complete(withStatusCode: 200, data: accountsResponseData)
 
         XCTAssertEqual(
-            spy.listings, expectedFeed.products.toModels()
+            spy.didSuccessfullyLoadFeed, true
         )
-        XCTAssertEqual(spy.error, .none)
+        XCTAssertEqual(spy.didFailToLoadFeed, false)
     }
 }
 
@@ -122,7 +126,7 @@ extension ListingsFeedViewModelUnitTests {
     ) -> (sut: ListingsFeedViewModel, spy: SpyListingsFeed) {
         let coordinator = SpyListingsCoordinator()
         let sut = ListingsFeedViewModel(
-            accountsFeedService: listingsFeedService,
+            listingsFeedService: listingsFeedService,
             title: title,
             coordinator: coordinator
         )
