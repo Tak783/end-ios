@@ -132,7 +132,9 @@ extension ListingsFeedViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        efficientPrint("Did select item at index path \(indexPath)")
+        feedViewModel?.didRequestToNavigateDetailForListing(
+            atIndex: indexPath.row
+        )
     }
 }
 
