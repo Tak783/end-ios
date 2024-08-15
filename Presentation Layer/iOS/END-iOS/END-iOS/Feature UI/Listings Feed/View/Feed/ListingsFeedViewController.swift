@@ -45,8 +45,7 @@ extension ListingsFeedViewController {
             }
         }
 
-        feedViewModel?.onFeedLoadError = { [weak self] _ in
-            guard let self = self else { return }
+        feedViewModel?.onFeedLoadError = { _ in
             efficientPrint("Did fail to load feed")
         }
 
