@@ -11,12 +11,12 @@ import CoreENDSharedModels
 public final class ListingDetailViewModel {
     public private (set) var presentationModel: ENDProductPresentationModelling
     
-    private weak var coordinator: ListingsFeedCoordinating?
+    private weak var coordinator: ListingsCoordinating?
     private let listing: ENDProductModelling?
 
     public init(
         listing: ENDProductModelling,
-        coordinator: ListingsFeedCoordinating?
+        coordinator: ListingsCoordinating?
     ) {
         self.listing = listing
         self.coordinator = coordinator

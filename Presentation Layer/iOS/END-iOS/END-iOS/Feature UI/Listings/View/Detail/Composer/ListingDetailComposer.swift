@@ -16,7 +16,7 @@ final class ListingDetailComposer {
     static func compose(
         with service: ListingsFeedServiceable,
         listing: ENDProductModelling,
-        coordinator: ListingsFeedCoordinating
+        coordinator: ListingsCoordinating
     ) -> ListingDetailViewController {
         let viewModel = ListingDetailViewModel(
             listing: listing,

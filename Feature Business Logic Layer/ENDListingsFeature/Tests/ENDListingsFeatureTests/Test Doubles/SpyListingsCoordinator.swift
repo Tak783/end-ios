@@ -9,7 +9,7 @@ import Foundation
 import ENDListingsFeature
 import CoreENDSharedModels
 
-final class SpyListingsCoordinator: ListingsFeedCoordinating {
+final class SpyListingsCoordinator: ListingsCoordinating {
     var didNavigateToListingsFeed = false
     var didNavigateToListingsDetail = false
     
