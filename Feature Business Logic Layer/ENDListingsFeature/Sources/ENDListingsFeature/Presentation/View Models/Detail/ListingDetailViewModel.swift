@@ -15,7 +15,7 @@ public final class ListingDetailViewModel {
     private let listing: ENDProductModelling?
 
     public init(
-        listing: ENDProductModel,
+        listing: ENDProductModelling,
         coordinator: ListingsFeedCoordinating?
     ) {
         self.listing = listing
@@ -25,3 +25,6 @@ public final class ListingDetailViewModel {
         )
     }
 }
+
+// MARK: - ListingDetailViewModel
+extension ListingDetailViewModel: ListingDetailViewModelling {}

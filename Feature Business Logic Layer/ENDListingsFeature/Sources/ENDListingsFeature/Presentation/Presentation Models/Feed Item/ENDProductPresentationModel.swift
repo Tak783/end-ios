@@ -14,7 +14,7 @@ public struct ENDProductPresentationModel {
     public private (set) var price: String
     public private (set) var imageURL: URL?
     
-    public init(withListing listing: ENDProductModel) {
+    public init(withListing listing: ENDProductModelling) {
         self.id = listing.id
         self.name = listing.name
         self.price = listing.price

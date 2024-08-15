@@ -23,10 +23,10 @@ final class ListingsFeedComposer {
             title: title,
             coordinator: coordinator
         )
-        let accountsFeedViewController = make(
+        let listingsFeedViewController = make(
             with: viewModel
         )
-        return accountsFeedViewController
+        return listingsFeedViewController
     }
 }
 
@@ -35,8 +35,8 @@ extension ListingsFeedComposer {
     private static func make(
         with viewModel: ListingsFeedViewModelling
     ) -> ListingsFeedViewController {
-        let accountsFeedViewController = ListingsFeedViewController()
-        accountsFeedViewController.feedViewModel = viewModel
-        return accountsFeedViewController
+        let listingsFeedViewController = ListingsFeedViewController()
+        listingsFeedViewController.feedViewModel = viewModel
+        return listingsFeedViewController
     }
 }

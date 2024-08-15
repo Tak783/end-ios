@@ -15,6 +15,7 @@
 		8B37DCC12C6CDD7E00824B46 /* END_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */; };
 		8B37DCC32C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */; };
 		8BA8BE0F2C6E24FB00A88136 /* ListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8BE0E2C6E24FB00A88136 /* ListingDetailViewController.swift */; };
+		8BA8BE122C6E259700A88136 /* ListingDetailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8BE112C6E259700A88136 /* ListingDetailComposer.swift */; };
 		8BE06EF02C6D3E9400FA1D07 /* ListingsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */; };
 		8BE06EF52C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF42C6D3EEB00FA1D07 /* CoreFeatureLayerPresentationHelpers */; };
 		8BE06EF72C6D3EEB00FA1D07 /* CoreFoundational in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE06EF62C6D3EEB00FA1D07 /* CoreFoundational */; };
@@ -61,6 +62,7 @@
 		8B37DCC02C6CDD7E00824B46 /* END_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITests.swift; sourceTree = "<group>"; };
 		8B37DCC22C6CDD7E00824B46 /* END_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = END_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8BA8BE0E2C6E24FB00A88136 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
+		8BA8BE112C6E259700A88136 /* ListingDetailComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailComposer.swift; sourceTree = "<group>"; };
 		8BE06EEF2C6D3E9400FA1D07 /* ListingsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsFeedViewController.swift; sourceTree = "<group>"; };
 		8BE06EFE2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchCoordinator.swift; sourceTree = "<group>"; };
 		8BE06F032C6D3FF700FA1D07 /* ListingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsCoordinator.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		8BA8BE0C2C6E24D800A88136 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8BA8BE102C6E258200A88136 /* Composer */,
 				8BA8BE0E2C6E24FB00A88136 /* ListingDetailViewController.swift */,
 			);
 			path = Detail;
@@ -166,6 +169,14 @@
 				8BE06F0E2C6E05CB00FA1D07 /* Feed Cell */,
 			);
 			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		8BA8BE102C6E258200A88136 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				8BA8BE112C6E259700A88136 /* ListingDetailComposer.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 		8BE06EEA2C6D3DFB00FA1D07 /* Launch */ = {
@@ -415,6 +426,7 @@
 				8BE06EFF2C6D3F9600FA1D07 /* AppLaunchCoordinator.swift in Sources */,
 				8B37DCA22C6CDD7D00824B46 /* SceneDelegate.swift in Sources */,
 				8BE06F092C6D415800FA1D07 /* ListingsFeedComposer.swift in Sources */,
+				8BA8BE122C6E259700A88136 /* ListingDetailComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
