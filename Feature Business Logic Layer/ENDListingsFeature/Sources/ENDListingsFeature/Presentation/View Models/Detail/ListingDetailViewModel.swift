@@ -9,7 +9,7 @@ import Foundation
 import CoreENDSharedModels
 
 public final class ListingDetailViewModel {
-    public private (set) var presentationModel: ENDProductPresentationModelling
+    public private (set) var presentationModel: ENDProductDetailPresentationModelling
     
     private weak var coordinator: ListingsCoordinating?
     private let listing: ENDProductModelling?
@@ -20,11 +20,11 @@ public final class ListingDetailViewModel {
     ) {
         self.listing = listing
         self.coordinator = coordinator
-        self.presentationModel = ENDProductPresentationModel(
+        self.presentationModel = ENDProductDetailPresentationModel(
             withListing: listing
         )
     }
 }
 
-// MARK: - ListingDetailViewModel
+// MARK: - ListingDetailViewModelling
 extension ListingDetailViewModel: ListingDetailViewModelling {}

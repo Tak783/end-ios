@@ -14,14 +14,14 @@ public struct ENDProductDetailPresentationModel {
     public private (set) var price: String
     public private (set) var imageURL: URL?
     
-    public init(withListing listing: ENDProductModel) {
+    public init(withListing listing: ENDProductModelling) {
         self.id = listing.id
-        self.name = listing.name.capitalized
-        self.price = listing.price.capitalized
+        self.name = listing.name.uppercased()
+        self.price = listing.price.uppercased()
         self.imageURL = listing.imageURL
     }
 }
 
 // MARK: - ENDProductPresentationModelling
-extension ENDProductPresentationModel: ENDProductDetailPresentationModelling {}
+extension ENDProductDetailPresentationModel: ENDProductDetailPresentationModelling {}
 

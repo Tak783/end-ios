@@ -52,7 +52,7 @@ extension ListingDetailViewController {
     }
     
     private func update(
-        withListing listing: ENDProductPresentationModelling
+        withListing listing: ENDProductDetailPresentationModelling
     ) {
         productNameLabel.text = listing.name
         productPriceLabel.text = listing.price
@@ -75,7 +75,7 @@ extension ListingDetailViewController {
     
     private func addConstraintsToSubviews() {
         productNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.snp.top).offset(navigationBarHeight() + Layout.largeMargin)
+            make.top.equalTo(view.snp.top).offset(navigationBarHeight() + Layout.smallMargin * 2)
             make.leading.equalToSuperview().offset(Layout.regularMargin)
             make.trailing.equalToSuperview().offset(-Layout.regularMargin)
         }

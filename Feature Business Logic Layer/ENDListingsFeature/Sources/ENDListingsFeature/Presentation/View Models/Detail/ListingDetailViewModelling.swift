@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol ListingDetailViewModelling {
-    var presentationModel: ENDProductPresentationModelling { get }
+    var presentationModel: ENDProductDetailPresentationModelling { get }
 }
