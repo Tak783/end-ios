@@ -110,8 +110,8 @@ extension ListingCollectionViewCell {
 extension ListingCollectionViewCell {
     private static func generateProductPriceLabel() -> UILabel {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.textColor = .label
         label.numberOfLines = 1
         label.textAlignment = .center
         return label
@@ -119,7 +119,7 @@ extension ListingCollectionViewCell {
 
     private static func generateProductNameLabel() -> UILabel {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textColor = .label
         label.numberOfLines = 2
         label.textAlignment = .center
