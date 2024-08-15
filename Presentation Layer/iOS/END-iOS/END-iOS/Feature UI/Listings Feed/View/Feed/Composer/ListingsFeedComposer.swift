@@ -35,7 +35,7 @@ extension ListingsFeedComposer {
     private static func make(
         with viewModel: ListingsFeedViewModelling
     ) -> ListingsFeedViewController {
-        let accountsFeedViewController = ListingsFeedViewController.instantiate()
+        let accountsFeedViewController = ListingsFeedViewController()
         accountsFeedViewController.feedViewModel = viewModel
         return accountsFeedViewController
     }
