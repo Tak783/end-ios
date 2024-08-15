@@ -16,8 +16,8 @@ public struct ENDProductDetailPresentationModel {
     
     public init(withListing listing: ENDProductModel) {
         self.id = listing.id
-        self.name = listing.name
-        self.price = listing.price
+        self.name = listing.name.capitalized
+        self.price = listing.price.capitalized
         self.imageURL = listing.imageURL
     }
 }
