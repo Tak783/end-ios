@@ -91,10 +91,18 @@ extension ListingCollectionViewCell {
 extension ListingCollectionViewCell {
     private func updateListingImage(withImageURL imageURL: URL?) {
         guard let imageURL else {
+            updateListingImage(givenImageIsPresent: false)
             return
         }
         let source = Source.network(imageURL)
         productImageView.kf.setImage(with: source)
+        updateListingImage(givenImageIsPresent: true)
+    }
+    
+    private func updateListingImage(
+        givenImageIsPresent imageIsPresent: Bool
+    ) {
+        productImageView.backgroundColor = imageIsPresent ? .clear : .lightGray
     }
 }
 
