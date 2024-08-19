@@ -1,20 +1,20 @@
 # END Listings iOS
 
 Important things to know
-* Unit/integration tests were mostly written services and view models, - please see inside the package test folders -
-* Where you see for example `RemoteENDProductModel` and `ENDProductModel` this is done to:
-  * to adhere to Single Responsibility in SOLID - the model should do only one thing
-  * stop large objects that are hard to maintain from being created i.e. mixing CoreData and Codable)
-  * maximise flexibility and maintainability, all of these adhere to a protocol
-* Used swift packages I built in previous projects for Networking, Testing and common extensions i.e. to Foundation, for speed
+* Unit/integration tests were mostly written services and view models, please see inside the test folders for the Swift Packages 
+* Model Design. When you see models that may look similar, for example, `RemoteENDProductModel` and `ENDProductModel`, please be aware that they have different use cases, one is the local one consumed by the app everywhere. Remote is only used to interact with REST APIs and for example, `CoreDataENDProductModel` will be used to interact with Core Data. This was done to:
+  * Adhere to Single Responsibility in SOLID - the model should do only one thing, have one use case
+  * Prevents large modules being created that are hard to maintain i.e. mixing CoreData and Codable
+  * Maximise flexibility and  maintainability whilst adhering to a protocol
+* Swift packages built in previous projects for Networking, Testing and common extensions i.e. to Foundation, were used for speed
 * Test doubles are used i.e Stub, Spy and Mock to provide a way to isolate the code in the test from its dependencies or production code - pure unit tests
-* Unit and Integration tests were written using TDD. More could be written especially for the UI layer. Wrote only fundamental tests.
+* `makeSUT` is used instead of the default `setUp` and `tearDown` methods as those methods enable objects not to be deallocated in multiple tests which can lead to false positives. `setUp` and `tearDown` inadvertently stops tests from being Isolated, violating the I in F.I.R.S.T. `makeSUT` ensures that objects are deallocated as the function they are hosted in naturally deallocates them as execution ends.    
+* Unit and Integration tests were written using TDD. More could be written especially for the UI layer. Wrote only fundamental tests
 * Closure-based binding was used for bindings with the MVVM architecture, other options not used were Combine, KVO and property observers
-* Imperative commit style was written for commits with detail where appropriate, other ways are valid too.
-* Please read below to understand the architecture logic and reasoning behind this approach
-* This is one approach, other approaches are possible too depending on the project and team
-* This approach applied here focused on practicality, pragmaticism and maintainability. It has been applied successfully in previous roles.
-* Below are explanations for the approach and an architectural diagram
+* Imperative commit style was used for commits with detail where appropriate, other ways are valid too - this depends on the engineering team values
+* This approach taken is one approach, other methods are possible too depending on the project and team values
+* This approach is applied here and focuses on practicality, pragmaticism, and maintainability and has been applied successfully in previous roles.
+* The code is designed to be self-documenting, but please read below supported by the architecture diagram to understand the architecture logic and reasoning behind the approach taken
 
 ## Overview 
 
