@@ -12,9 +12,9 @@ Important things to know
 * Unit and Integration tests were written using TDD. More could be written especially for the UI layer. Wrote only fundamental tests
 * Closure-based binding was used for bindings with the MVVM architecture, other options not used were Combine, KVO and property observers
 * Imperative commit style was used for commits with detail where appropriate, other ways are valid too - this depends on the engineering team values
-* This approach is applied here and focuses on practicality, pragmaticism, and maintainability and has been applied successfully in previous roles.
-* The code is designed to be self-documenting, but please read below supported by the architecture diagram to understand the architecture logic and reasoning behind the approach taken
-* The approach taken for this project is one approach, other methods are feasible too depending on the project, business needs and team values
+* The pragmatic approach applied here focuses on speed, practicality and maintainability. This approach has been applied successfully in previous roles.
+* The code is designed to be self-documenting. However, please read the documentation below to understand the architecture, logic and reasoning behind the approach taken.
+* The approach taken for this project is one approach, other methods are viable depending on the project, business needs and team values.
 
 ## Overview 
 
