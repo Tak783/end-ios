@@ -71,8 +71,6 @@ Contains platform-agnostic components and extensions used by higher layers to su
 
 ### Feature Business Logic Layer (explained)
 Contains Feature level Businesss logic for framework modules containing features. Frameworks have API, Service and Presentation Layers.
-* Account Feature: Accounts Feed, Create New Savings Goal, Add To Savings Goal
-* Savings Goal Feature: Savings Goal Feed, Create New Savings Goal, Add To Savings Goal
 
 ### Core Presentation (explained)
 * CoreUIKit: contains extensions to the `UIKit` framework.
@@ -80,7 +78,6 @@ Contains Feature level Businesss logic for framework modules containing features
   
 ### App Presentation Layer (explained)
 Application Layer: Where apps Mac, iOS, iPadOS, Watch OS projects and exist and present feature-level components. The apps are supported by lower level components.
-* RoundUp app: App for saving based on round-up of weekly transactions
 
 ## Improvements 
 
