@@ -20,6 +20,10 @@ let package = Package(
         .package(
             name: "CoreFoundational",
             path: "../CoreFoundational"
+        ),
+        .package(
+            name: "CoreTesting",
+            path: "../CoreTesting"
         )
     ],
     targets: [
@@ -34,7 +38,10 @@ let package = Package(
         ),
         .testTarget(
             name: "CoreNetworkingTests",
-            dependencies: ["CoreNetworking"]
+            dependencies: [
+                "CoreNetworking",
+                "CoreTesting"
+            ]
         ),
     ]
 )
